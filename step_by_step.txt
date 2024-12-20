@@ -1,0 +1,24 @@
+# Create virtual environment
+
+python -m venv ~/.env/curso_open
+
+
+# Activate environment
+
+.\~\.env\curso_open\Scripts\activate
+.\~\.env\curso_open\Scripts\deactivate
+
+# Install Django
+
+pip install Django
+
+django-admin startproject holamundo
+
+python manage.py migrate
+
+python manage.py runserver
+
+create view.py dentro de la carpeta donde esta settings.py + urls.py, la idea es 
+asociar las funciones en view con las urls, para
+
+rutas con parametros : path('despedida/<int:edad>', views.despedida, name='despedida')
