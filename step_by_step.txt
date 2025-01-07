@@ -5,8 +5,8 @@ python -m venv ~/.env/curso_open
 
 # Activate environment
 
-.\~\.env\curso_open\Scripts\activate
-.\~\.env\curso_open\Scripts\deactivate
+.env\my_blog\Scripts\activate
+.env\my_blog\Scripts\deactivate
 
 # Install Django
 

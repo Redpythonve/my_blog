@@ -10,20 +10,85 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
+
+
         <h1>From Queries</h1>
        
         <ul>
-
            {% for authors  in authors %}
-
-            <li>{{ authors.name }}</li>
-            <li>{{ authors.email }}</li>
-            
-           
-           {% endfor %}
-            
-            
+           <li>{{ authors.name }} ( {{ authors.email }} )  </li>   
+           {% endfor %}   
         </ul>
+
+        <h1>Por Limites de 10 primeros</h1>
+
+        <ul>
+            {% for limits  in limits %}
+            <li>{{ limits}}  </li>   
+            {% endfor %}   
+         </ul>
+
+         <h1>Por Limites de 5 a 10 primeros</h1>
+
+         <ul>
+             {% for offsets  in offsets %}
+             <li>{{ offsets}}  </li>   
+             {% endfor %}   
+          </ul>
+
+          <h1>Ordenado por Mail</h1>
+
+          <ul>
+              {% for orders  in orders %}
+              <li>{{ orders}}  </li>   
+              {% endfor %}   
+           </ul>
+
+           <h1>Ordenado por Mail con Limites</h1>
+
+           <ul>
+               {% for orders_2  in orders_2 %}
+               <li>{{ orders_2}}  </li>   
+               {% endfor %}   
+           </ul>
+
+
+
+           <h1>Ordenado por Group</h1>
+
+           <ul>
+               {% for group  in group %}
+               <li>{{ group}}  </li>   
+               {% endfor %}   
+           </ul>
+
+           <h1>Filtrado x Id lowthanequal </h1>
+
+           <ul>
+               {% for filters  in filters %}
+               <li>{{ filters}}  </li>   
+               {% endfor %}   
+           </ul>
+
+           <h1>Filtrado 2 por email lowerthan </h1>
+
+           <ul>
+               {% for filters_2 in filters_2 %}
+               <li>{{ filters_2}}  </li>   
+               {% endfor %}   
+           </ul>
+
+
+
+        <h3>EL Total de Autores es  : {{authors|length}} </h3>
+
+        <h3>Filtrado por Id </h3>
+        <p>{{author}}</p>
+        <p>{{author_2}}</p>
+        <p>{{author_2.email}}</p>
+        
+
+   
         
         <script src="" async defer></script>
     </body>
